@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomato Plant Disease Prediction</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://thefarmatgreenvillage.com/wp-content/uploads/2018/05/heirloom-tomatoes.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            width: 100%;
+            max-width: 650px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav h1 {
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .choose,
+        .predict {
+            cursor: pointer;
+            width: calc(50% - 10px);
+            height: 45px;
+            border: 2px solid rgba(8, 8, 8, 0.932);
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(19, 138, 19);
+            margin-bottom: 20px;
+        }
+
+        .images {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .select-image {
+            cursor: pointer;
+            width: calc(50% - 10px);
+            height: 45px;
+            border: 2px solid rgba(8, 8, 8, 0.932);
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(19, 138, 19);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .predicted-disease {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .predicted-disease p{
+            color: black;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .choose,
+            .predict,
+            .select-image {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>Tomato Plant Disease Prediction</h1>
+        <div class="container">
+            <label for="file-input" class="select-image">Select Image</label>
+            <input type="file" id="file-input" class="file-input">
+            <h3>No File Chosen</h3>
+            <button class="predict">Predict Leaf Disease</button>
+        </div>
+        <div class="images">
+            <h2>Images</h2>
+            <img src="https://www.thespruce.com/thmb/Zt6i62rHSYwx-WlpIAjfCbDCnwM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tomato-leaf-diseases-1403409-01-b26aaf50f62947c2b219ffa2d55a3e40.jpg">
+            <img src="https://gardenerspath.com/wp-content/uploads/2020/09/Septoria-on-Tomato-Plants.jpg">
+        </div>
+        <div class="predicted-disease">
+            <p>Predicted Disease: </p>
+        </div>
+    </div>
+</body>
+</html>
+

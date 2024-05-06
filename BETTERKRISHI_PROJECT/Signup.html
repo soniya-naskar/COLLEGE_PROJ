@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to right, rgb(158, 103, 137), rgb(34, 2, 87));
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      background-color: transparent;
+      padding: 28px;
+      margin: 0 28px;
+      backdrop-filter: blur(55px);
+      border: 2px solid rgba(255, 255, 255, 0.932);
+      border-radius: 10px;
+    }
+
+    .form-title {
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+      padding-bottom: 6px;
+      color: white;
+      text-shadow: 2px 2px 2px black;
+      border-bottom: solid 1px white;
+    }
+
+    .main-user-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+
+    .user-input-box {
+      width: calc(50% - 10px);
+      padding-bottom: 15px;
+    }
+
+    .user-input-box label {
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 5px 0;
+    }
+
+    .user-input-box input {
+      height: 40px;
+      width: 100%;
+      border-radius: 7px;
+      outline: none;
+      border: 1px solid grey;
+      padding: 0 10px;
+    }
+
+    .form-submit-btn {
+      margin-top: 20px;
+    }
+
+    .form-submit-btn input {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 20px;
+      padding: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.932);
+      border-radius: 10px;
+      color: rgb(209, 209, 209);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .form-submit-btn input:hover {
+      background-color: rgb(179, 134, 216);
+      color: rgb(255, 255, 255);
+    }
+
+    .para-2 {
+      margin-top: 20px;
+    }
+
+    .para-2 a {
+      color: azure;
+    }
+
+    .para-2 a:hover {
+      color: rgb(22, 21, 22);
+    }
+
+    .policy a {
+      color: azure;
+    }
+
+    .policy a:hover {
+      color: rgb(23, 23, 24);
+    }
+
+    @media (max-width: 768px) {
+      .user-input-box {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+
+      .main-user-info {
+        flex-direction: column;
+      }
+
+      .form-submit-btn input {
+        font-size: 18px;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h1 class="form-title">Registration</h1>
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">First Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Enter First Name"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="username">Last name</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter Last name"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Enter Phone Number"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter Password"
+            />
+          </div>
+          <div class="user-input-box">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+            />
+          </div>
+        </div>
+        <div class="policy">
+          <p>
+            By clicking the Sign Up button, you agree to our
+            <a href="#">Terms and Condition</a>
+          </p>
+        </div>
+
+        <div class="form-submit-btn">
+          <input type="submit" value="Register" />
+        </div>
+
+        <p class="para-2">
+          Already have an account? <a href="index.html">Go to homepage</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
+
